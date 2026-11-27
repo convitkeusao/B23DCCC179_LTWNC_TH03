@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import Link from "next/link";
+import Header from "@/components/Header";
+import Providers from "./providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,14 +16,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="vi">
       <body>
-        <header>
-          <nav aria-label="Menu chính">
-            <Link href="/">Trang chủ</Link>
-            <Link href="/posts">Tin đăng</Link>
-          </nav>
-        </header>
-        {children}
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );
 }
+
