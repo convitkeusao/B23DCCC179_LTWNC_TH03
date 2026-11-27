@@ -92,3 +92,22 @@ th, td {
   padding: 0.5rem;
   border-bottom: 1px solid GrayText;
 }
+
+.post-form {
+  display: grid;
+  max-width: 32rem;
+  justify-items: start;
+}
+
+.post-form > div {
+  display: grid;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.post-form textarea {
+  font: inherit;
+  padding: 0.35rem;
+  resize: vertical;
+}
+
